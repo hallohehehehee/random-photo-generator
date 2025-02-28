@@ -1,0 +1,25 @@
+# Random Image Display
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <img id="randomImage" src="" alt="Random Image" />
+
+    <script>
+        const images = [];
+        const mediaFolder = 'media/'; // Path to your media folder
+        const totalImages = 5; // Total number of images in the media folder
+
+        for (let i = 1; i <= totalImages; i++) {
+            images.push(mediaFolder + 'image' + i + '.jpg'); // Adjust the file extension as needed
+        }
+
+        const randomIndex = Math.floor(Math.random() * images.length);
+        document.getElementById('randomImage').src = images[randomIndex];
+    </script>
+</body>
+</html>
